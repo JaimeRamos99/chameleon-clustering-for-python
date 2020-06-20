@@ -5,7 +5,7 @@ from chameleon import *
 
 if __name__ == "__main__":
     # get a set of data points
-    df = pd.read_csv('./datasets/Aggregation.csv', sep=' ',
+    df = pd.read_csv('./datasets/smileface.csv', sep=' ',
                      header=None)
 
     # returns a pands.dataframe of cluster

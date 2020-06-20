@@ -1,6 +1,6 @@
 import itertools
 from graphtools import *
-
+import pandas as pd
 
 def internal_interconnectivity(graph, cluster):
     return np.sum(bisection_weights(graph, cluster))
@@ -71,8 +71,8 @@ def merge_best(graph, df, a, k, verbose=False):
             print("Merging c%d and c%d" % (ci, cj))
         df.loc[df['cluster'] == cj, 'cluster'] = ci
         for i, p in enumerate(graph.nodes()):
-            if graph.node[p]['cluster'] == cj:
-                graph.node[p]['cluster'] = ci
+            if graph.nodes[p]['cluster'] == cj:
+                graph.nodes[p]['cluster'] = ci
     return max_score > 0
 
 
