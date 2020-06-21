@@ -25,8 +25,6 @@ def plot2d_data(df):
     cc = []
     for i in range(limit):
         valor =str(df[0][i]).split(",")
-        nuevo = [float(valor[0]),float(valor[1]),float(df['cluster'][i])]
-        matrix.append(nuevo)
         xx.append(float(valor[0]))
         yy.append(float(valor[1]))
         cc.append(float(df['cluster'][i]))
